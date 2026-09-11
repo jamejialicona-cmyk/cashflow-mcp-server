@@ -1,0 +1,61 @@
+<!--
+  Evaluation set for cashflow-mcp-server.
+
+  Every question is answerable using only this server's tools, requires more
+  than one call (the built-in templates are the shared starting point), and has
+  a single stable answer. The engine is deterministic and the templates ship
+  with the server, so these answers do not drift over time.
+
+  Answers were produced by solving each question with the tools themselves.
+-->
+<evaluation>
+  <qa_pair>
+    <question>Load the built-in managed service contract template without changing anything and evaluate it. In which month does cumulative cash flow first turn non-negative? Answer with the month number only.</question>
+    <answer>20</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Take the built-in managed service contract template and run the default set of sensitivity scenarios against it. Which scenario produces the lowest net present value? Answer with the scenario's label exactly as reported.</question>
+    <answer>No price indexation</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Using the built-in managed service contract template, how many units per month does the contract need to break even? Round to the nearest whole unit and answer with the number only.</question>
+    <answer>65</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Evaluate the built-in managed service contract template. Exactly one warning is raised. What is its code? Answer with the code exactly as reported.</question>
+    <answer>WORKING_CAPITAL_HEAVY</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Load the built-in subscription contract template and evaluate it unchanged. In which month is the onboarding investment fully recovered? Answer with the month number only.</question>
+    <answer>10</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Start from the built-in managed service contract template, whose equipment is financed over 36 months at a 12% nominal rate with a down payment. Compare three ways of paying for that same 3,500,000 of equipment: paying it entirely in cash at signing, a 24-month interest-free plan with no down payment, and the template's own 36-month plan. Ranked by net present value, which one wins? Answer with exactly one of: cash, interest-free, financed.</question>
+    <answer>interest-free</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Analyze the annual cash flow vector -1000, 500, 500, 500 where the first value sits at period zero. What is the internal rate of return as an annual percentage, rounded to two decimal places? Answer with the number only, without a percent sign.</question>
+    <answer>23.38</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>An effective annual rate of 12% is being converted to a monthly rate for discounting, which compounds rather than divides. What is the resulting monthly rate as a percentage, rounded to four decimal places? Answer with the number only, without a percent sign.</question>
+    <answer>0.9489</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>A principal of 3,150,000 is amortized over 36 level monthly payments at a 12% nominal annual rate. What is the monthly payment, rounded to the nearest whole unit? Answer with the number only.</question>
+    <answer>104625</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Run the default sensitivity scenarios on the built-in managed service contract template. In the scenario where volume comes in 20% below plan, how many percentage points does the annual IRR fall compared with the base case? Answer with the number only, including its sign, to two decimal places.</question>
+    <answer>-46.42</answer>
+  </qa_pair>
+</evaluation>

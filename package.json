@@ -1,0 +1,35 @@
+{
+  "name": "cashflow-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server exposing a deterministic project cash flow engine: IRR, NPV, payback, working capital, break-even and sensitivity analysis as tools an agent can call.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "cashflow-mcp-server": "dist/index.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "finance",
+    "cash-flow",
+    "irr",
+    "npv",
+    "sensitivity-analysis"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', 0o755)\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.js",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "cashflow-engine": "file:../cashflow-engine",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
