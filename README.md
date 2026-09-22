@@ -3,7 +3,7 @@
 An MCP server that lets an agent evaluate a real financing decision: IRR, NPV,
 payback, working capital, break-even and sensitivity analysis, exposed as tools.
 
-Built on [cashflow-engine](https://github.com/OWNER/cashflow-engine), a
+Built on [cashflow-engine](https://github.com/jamejialicona-cmyk/cashflow-engine), a
 deterministic project cash flow engine. Every tool is a pure computation. No
 network, no filesystem, no clock, no state between calls.
 
